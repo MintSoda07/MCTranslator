@@ -107,7 +107,7 @@ namespace MCTranslator
 
                 if (jsonContent != null)
                 {
-                    AppendTextWithScroll($"$\"[{{index}}/{{totalItems}}][{item}] 언어 확인 중...\n");
+                    AppendTextWithScroll($"[{index}/{totalItems}][{item}] 언어 확인 중...\n");
                     string translatedJson = await TranslateLargeJson(jsonContent, textBox1.Text, item.ToString());
                     AppendTextWithScroll($"언어 파일 확인 완료.. 번역 시작\n");
                     if (translatedJson != null)
